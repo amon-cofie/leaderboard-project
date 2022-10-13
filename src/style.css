@@ -3,16 +3,19 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  transition: 0.3s;
 }
 
 body {
+  height: 90vh;
   padding: 2rem;
+  background: linear-gradient(to bottom, gray, white 10%, white 90%, gray);
 }
 
 #recent-score-section {
-  float: left;
-  width: 50%;
-  padding: 2rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #add-score-section {
@@ -32,9 +35,28 @@ body {
 }
 
 .scores-container {
-  width: 100%;
+  /* width: 100%; */
+  height: 20rem;
+  overflow-y: scroll;
   border: 2px solid black;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.scores-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scores-container::-webkit-scrollbar-thumb {
+  background: rgb(82, 81, 81);
+}
+
+.scores-container::-webkit-scrollbar-track {
+  background: linear-gradient(to right, gray, gray, #fff, black);
+}
+
+.scores-container::-webkit-scrollbar-thumb:hover {
+  background: #fff;
 }
 
 .scores-container li {
@@ -49,4 +71,21 @@ body {
 .submit-new-score-button {
   align-self: end;
   width: 30%;
+}
+
+.add-shadow-to-buttons {
+  border-style: none;
+  box-shadow: 3px 3px 4px black;
+}
+
+@media screen and (min-width: 400px) {
+  #recent-score-section {
+    float: left;
+    width: 50%;
+    padding: 2rem;
+  }
+
+  #add-score-section {
+    padding: 2rem;
+  }
 }
