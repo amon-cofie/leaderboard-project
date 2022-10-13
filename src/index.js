@@ -21,9 +21,7 @@ const addGame = async (url = '', data = {}) => {
 addGame(
   'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/',
   { name: 'myNewGame' },
-).then((data) => {
-  console.log(data);
-});
+);
 
 addScoreForm.addEventListener('submit', (event) => {
   event.preventDefault();
